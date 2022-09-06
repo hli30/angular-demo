@@ -1,0 +1,10 @@
+<div class="flex justify-start flex-col w-full md:w-auto items-start pb-1">
+  <!-- the /users/1/ here is to mock the logged in state -->
+  <a
+    [routerLink]="navItem.path"
+    class="flex justify-start items-center space-x-6 hover:text-white focus:bg-gray-700 focus:text-white hover:bg-gray-700 text-gray-400 rounded px-3 py-2 w-52"
+  >
+    <fa-icon size="xl" [icon]="navItem.icon"></fa-icon>
+    <label class="text-base leading-4">{{ navItem.label }}</label>
+  </a>
+</div>

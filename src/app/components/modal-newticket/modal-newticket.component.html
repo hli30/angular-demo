@@ -1,0 +1,30 @@
+<div mat-dialog-content>
+  <h1>{{ formTitle }}</h1>
+  <div class="flex flex-col">
+    <mat-form-field>
+      <mat-label>Subject</mat-label>
+      <input matInput [formControl]="subject" />
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Description</mat-label>
+      <textarea
+        matInput
+        [formControl]="description"
+        cdkTextareaAutosize
+        cdkAutosizeMinRows="8"
+      ></textarea>
+    </mat-form-field>
+  </div>
+</div>
+<div mat-dialog-actions class="justify-end">
+  <button mat-raised-button color="warn" mat-dialog-close>Cancel</button>
+  <button
+    mat-raised-button
+    color="primary"
+    (click)="onSubmitClick()"
+    cdkFocusInitial
+  >
+    Submit
+  </button>
+</div>
